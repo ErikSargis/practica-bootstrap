@@ -3,81 +3,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visit Armenia - Destinations</title>
+    <title>Visit Armenia - Inici</title>
+    <!-- CDN Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
-<body class="bg-body-secondary">
+<body class="bg-light">
 
+    <!-- 1. BARRA DE NAVEGACIÓ (NAVBAR) -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">Visit Armenia</a>
+            <a class="navbar-brand fw-bold" href="index.html">Visit Armenia</a>
+            <!-- Botó hamburguesa per a pantalles petites -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacio">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menuNavegacio">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Inici</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Destinacions</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Contacte</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Inici</a></li>
+                    <li class="nav-item"><a class="nav-link" href="destinacions.html">Destinacions</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacte.html">Contacte</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container mt-4 mb-5">
-        
-        <header class="bg-danger text-white text-center p-5 mb-5 rounded shadow">
-            <h1 class="fw-bold">Descobreix Armènia</h1>
-            <p class="fs-5 mb-0">Un viatge al bressol de la història entre muntanyes mil·lenàries</p>
-        </header>
+    <!-- 2. CAPÇALERA (HEADER) -->
+    <header class="bg-danger text-white text-center p-4 mb-4 shadow-sm">
+        <h1 class="fw-bold mb-1">Descobreix Armènia</h1>
+        <p class="mb-0">Història, paisatges i monuments mil·lenaris</p>
+    </header>
 
+    <div class="container mb-5">
+
+        <!-- 3. CARRUSEL (P4) -->
+        <section class="mb-5">
+            <div id="carruselArmenia" class="carousel slide shadow rounded overflow-hidden" data-bs-ride="carousel">
+                
+                <!-- Indicadors inferiors -->
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carruselArmenia" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carruselArmenia" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carruselArmenia" data-bs-slide-to="2"></button>
+                    <button type="button" data-bs-target="#carruselArmenia" data-bs-slide-to="3"></button>
+                    <button type="button" data-bs-target="#carruselArmenia" data-bs-slide-to="4"></button>
+                </div>
+
+                <!-- Diapositives del carrusel -->
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/cascade.webp" class="d-block w-100 object-fit-cover" alt="La Cascada d'Erevan" style="height: 420px;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>La Cascada d'Erevan</h5>
+                            <p>Monument arquitectònic contemporani al cor de la capital.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/garni.webp" class="d-block w-100 object-fit-cover" alt="Temple de Garni" style="height: 420px;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>Temple de Garni</h5>
+                            <p>L'únic temple grecoromà conservat a tota la regió.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/Khor-Virap-church-with-Ararat-Mountain-in-the-background-Armenia-1200x853.jpg" class="d-block w-100 object-fit-cover" alt="Monestir de Khor Virap" style="height: 420px;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>Monestir de Khor Virap</h5>
+                            <p>Vistes privilegiades al majestuós Mont Ararat.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/museum.webp" class="d-block w-100 object-fit-cover" alt="Matenadaran, institut de manuscrits antics d'Erevan" style="height: 420px;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>Matenadaran</h5>
+                            <p>Un gran centre de manuscrits antics i patrimoni cultural armeni.</p>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <img src="img/cool stones.webp" class="d-block w-100 object-fit-cover" alt="Formacions de basalt de la Simfonia de les Pedres" style="height: 420px;">
+                        <div class="carousel-caption d-none d-md-block bg-dark bg-opacity-50 rounded p-2">
+                            <h5>La Simfonia de les Pedres</h5>
+                            <p>Columnes de basalt espectaculars al congost de Garni.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls anterior/següent -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#carruselArmenia" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carruselArmenia" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <!-- 4. GRAELLA DE TARGETES RESPONSIVES (3 -> 2 -> 1) -->
         <main>
+            <h3 class="fw-bold mb-4 border-bottom pb-2 text-primary">Llocs Destacats</h3>
             <div class="row g-4">
                 
+                <!-- Targeta 1 -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="img/cascade.webp" class="card-img-top object-fit-cover" alt="La Cascada d'Erevan" style="height: 250px;">
+                        <img src="img/cascade.webp" class="card-img-top object-fit-cover" alt="La Cascada" style="height: 220px;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-primary fw-bold">La Cascada d'Erevan</h5>
-                            <p class="card-text text-muted flex-grow-1">Puja aquesta monumental escala a l'aire lliure, descobreix el seu art i gaudeix d'unes vistes panoràmiques de la ciutat.</p>
-                            <a href="#" class="btn btn-primary mt-3">Més informació</a>
+                            <h5 class="card-title fw-bold text-primary">La Cascada</h5>
+                            <p class="card-text text-muted flex-grow-1">Descobreix la vibrant vida urbana, museus i cafeteries a l'aire lliure.</p>
+                            <a href="destinacions.html" class="btn btn-primary mt-2">Més informació</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Targeta 2 -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="img/garni.webp" class="card-img-top object-fit-cover" alt="Temple de Garni" style="height: 250px;">
+                        <img src="img/garni.webp" class="card-img-top object-fit-cover" alt="Garni" style="height: 220px;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-primary fw-bold">Temple de Garni</h5>
-                            <p class="card-text text-muted flex-grow-1">Explora aquest temple antic, situat entre muntanyes espectaculars i el pintoresc engorjat del riu Azat.</p>
-                            <a href="#" class="btn btn-primary mt-3">Més informació</a>
+                            <h5 class="card-title fw-bold text-primary">Garni</h5>
+                            <p class="card-text text-muted flex-grow-1">Columnes basàltiques naturals formades per fluxos de lava mil·lenaris.</p>
+                            <a href="destinacions.html" class="btn btn-primary mt-2">Més informació</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- Targeta 3 -->
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="card h-100 shadow-sm border-0">
-                        <img src="img/Khor-Virap-church-with-Ararat-Mountain-in-the-background-Armenia-1200x853.jpg" class="card-img-top object-fit-cover" alt="Monestir de Khor Virap" style="height: 250px;">
+                        <img src="img/Khor-Virap-church-with-Ararat-Mountain-in-the-background-Armenia-1200x853.jpg" class="card-img-top object-fit-cover" alt="Khor Virap" style="height: 220px;">
                         <div class="card-body d-flex flex-column">
-                            <h5 class="card-title text-primary fw-bold">Khor Virap</h5>
-                            <p class="card-text text-muted flex-grow-1">Visita aquest monestir històric per gaudir d'una de les vistes més inoblidables del majestuós mont Ararat.</p>
-                            <a href="#" class="btn btn-primary mt-3">Més informació</a>
+                            <h5 class="card-title fw-bold text-primary">Khor Virap</h5>
+                            <p class="card-text text-muted flex-grow-1">Centres espirituals enclavats en canons i penya-segats espectaculars.</p>
+                            <a href="destinacions.html" class="btn btn-primary mt-2">Més informació</a>
                         </div>
                     </div>
                 </div>
 
             </div>
         </main>
+
+        <!-- 5. SECCIÓ EXPLICA'T MÉS (MÉS COMPLETA) -->
+        <section class="my-5">
+            <div class="text-center mb-4">
+                <h3 class="fw-bold text-primary">Per què visitar Armènia?</h3>
+                <p class="text-muted mb-0">Una destinació on la història, la natura i la hospitalitat es combinen en cada ruta.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <img src="https://www.lavozarmenia.com/media/lavozarmenia/images/2023/06/26/2023062621052111335.jpg" class="card-img-top" alt="Patrimoni mil·lenari d'Armènia" style="height: 190px; object-fit: cover;">
+                            <div class="p-3">
+                                <h5 class="fw-bold">Patrimoni mil·lenari</h5>
+                                <p class="text-muted mb-0">Monestirs, temples i ruïnes que narren mil anys d’història i espiritualitat.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7vp07rlJn6DmFTbT83SiBZmK7nPQTC118qiUlW6xVa0mU4hUeMoWL6pBx&s=10" class="card-img-top" alt="Paisatges impressionants d'Armènia" style="height: 190px; object-fit: cover;">
+                            <div class="p-3">
+                                <h5 class="fw-bold">Paisatges impressionants</h5>
+                                <p class="text-muted mb-0">Muntanyes, llacs, valls i formacions geològiques que fan de cada trajecte una experiència visual.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-0">
+                            <img src="https://gatapandok.am/wp-content/uploads/2026/07/Traditional-Dishes-768x461.png" class="card-img-top" alt="Plats tradicionals de la gastronomia armènia" style="height: 190px; object-fit: cover;">
+                            <div class="p-3">
+                                <h5 class="fw-bold">Gastronomia i cultura</h5>
+                                <p class="text-muted mb-0">Cafès, mercats locals i plats tradicionals que et permeten viure la cultura armènia des del primer moment.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <img src="img/yerevan.webp" class="img-fluid rounded shadow-sm" alt="Erevan" style="height: 420px; width: 100%; object-fit: cover;">
+                </div>
+                <div class="col-lg-6">
+                    <span class="badge bg-danger mb-3">Experiència completa</span>
+                    <h3 class="fw-bold text-primary mb-3">Una destinació que combina cultura, aventura i tranquil·litat</h3>
+                    <p class="text-muted">Armènia et convida a descobrir ciutats amb història, paisatges de muntanya, monestirs emmurallats i una hospitalitat genuïna que fa sentir cada visita especial.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item px-0">✔ Rutes culturals entre temples i museus</li>
+                        <li class="list-group-item px-0">✔ Excursions a la natura i muntanyes</li>
+                        <li class="list-group-item px-0">✔ Recorreguts amb història, art i gastronomia</li>
+                    </ul>
+                    <div class="mt-4">
+                        <a href="destinacions.html" class="btn btn-primary me-2">Explora destinacions</a>
+                        <a href="contacte.html" class="btn btn-outline-primary">Contacta'ns</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </div>
 
-    <footer class="bg-warning text-dark text-center p-4 mt-auto">
+    <!-- 5. PEU DE PÀGINA -->
+    <footer class="text-dark text-center p-4" style="background-color: #fd7e14;">
         <div class="container">
-            <p class="mb-0 fw-semibold">© 2025 Institut Barres i Ones | Visit Armenia</p>
+            <p class="mb-0 fw-semibold">© 2026 Institut Barres i Ones | Visit Armenia</p>
         </div>
     </footer>
 
+    <!-- Bootstrap Bundle JS (imprescindible per al carrusel i menú mòbil) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
