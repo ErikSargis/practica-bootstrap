@@ -9,7 +9,7 @@
 </head>
 <body class="bg-light">
 
-    <!-- 1. NAVBAR (Contacte activa) -->
+    <!-- 1. Menú de navegació; "active" marca la pàgina actual. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
             <a class="navbar-brand fw-bold" href="index.html">Visit Armenia</a>
@@ -26,17 +26,18 @@
         </div>
     </nav>
 
-    <!-- 2. CAPÇALERA -->
+    <!-- 2. Títol i text introductori de la pàgina. -->
     <header class="bg-danger text-white text-center p-4 mb-4 shadow-sm">
         <h1 class="fw-bold mb-1">Posa't en Contacte</h1>
         <p class="mb-0">Tens dubtes sobre el teu proper viatge a Armènia? Escriu-nos!</p>
     </header>
 
-    <!-- 3. CONTINGUT EN 2 COLUMNES (INFO + FORMULARI) -->
+    <!-- 3. La graella reparteix la informació i el formulari en dues columnes
+         a pantalles grans i les apila en pantalles petites. -->
     <main class="container mb-5">
         <div class="row g-4">
             
-            <!-- Columna esquerra: Dades de contacte -->
+            <!-- Columna esquerra: informació de l'oficina turística. -->
             <div class="col-lg-6 col-md-12">
                 <div class="card h-100 shadow-sm border-0 p-4">
                     <h4 class="text-primary fw-bold mb-3">Oficina de Turisme</h4>
@@ -55,22 +56,26 @@
                 </div>
             </div>
 
-            <!-- Columna dreta: Formulari estàndard Bootstrap -->
+            <!-- Columna dreta: formulari construït amb components Bootstrap. -->
             <div class="col-lg-6 col-md-12">
                 <div class="card h-100 shadow-sm border-0 p-4">
                     <h4 class="text-primary fw-bold mb-3">Envia'ns un missatge</h4>
 
+                    <!-- Cada label "for" apunta a l'id del seu camp.
+                         Això associa el nom visible amb el camp corresponent. -->
                     <form>
                         <div class="mb-3">
                             <label for="nom" class="form-label fw-semibold">Nom i Cognoms</label>
                             <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom">
                         </div>
 
+                        <!-- type="email" demana al navegador que comprovi el format del correu. -->
                         <div class="mb-3">
                             <label for="email" class="form-label fw-semibold">Correu Electrònic</label>
                             <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
                         </div>
 
+                        <!-- El menú desplegable permet triar una destinació. -->
                         <div class="mb-3">
                             <label for="destinacio" class="form-label fw-semibold">Destinació d'Interès</label>
                             <select class="form-select" id="destinacio">
@@ -83,11 +88,13 @@
                             </select>
                         </div>
 
+                        <!-- Àrea de text per a consultes més llargues que una sola línia. -->
                         <div class="mb-3">
                             <label for="missatge" class="form-label fw-semibold">Missatge o Consulta</label>
                             <textarea class="form-control" id="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..."></textarea>
                         </div>
 
+                        <!-- Sense un servidor configurat, el formulari no desa ni envia dades. -->
                         <button type="submit" class="btn btn-primary w-100 py-2">Enviar Consulta</button>
                     </form>
                 </div>
@@ -96,14 +103,14 @@
         </div>
     </main>
 
-    <!-- 4. PEU DE PÀGINA -->
+    <!-- Peu de pàgina amb la informació de l'autor del projecte. -->
     <footer class="text-dark text-center p-4" style="background-color: #fd7e14;">
         <div class="container">
             <p class="mb-0 fw-semibold">© 2026 Institut Barres i Ones | Visit Armenia</p>
         </div>
     </footer>
 
-    <!-- Bootstrap Bundle JS -->
+    <!-- Bootstrap JavaScript necessari per al menú desplegable en mòbil. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
