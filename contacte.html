@@ -55,9 +55,42 @@
                 </div>
             </div>
 
-            <!-- Columna dreta: espai reservat per crear el formulari -->
+            <!-- Columna dreta: Formulari estàndard Bootstrap -->
             <div class="col-lg-6 col-md-12">
-                <div class="card h-100 shadow-sm border-0 p-4"></div>
+                <div class="card h-100 shadow-sm border-0 p-4">
+                    <h4 class="text-primary fw-bold mb-3">Envia'ns un missatge</h4>
+
+                    <form>
+                        <div class="mb-3">
+                            <label for="nom" class="form-label fw-semibold">Nom i Cognoms</label>
+                            <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-semibold">Correu Electrònic</label>
+                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="destinacio" class="form-label fw-semibold">Destinació d'Interès</label>
+                            <select class="form-select" id="destinacio">
+                                <option selected>Tria una opció...</option>
+                                <option value="1">La Cascada d'Erevan</option>
+                                <option value="2">Temple de Garni</option>
+                                <option value="3">Monestir de Khor Virap</option>
+                                <option value="4">Llac Sevan</option>
+                                <option value="5">Ruta completa</option>
+                            </select>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="missatge" class="form-label fw-semibold">Missatge o Consulta</label>
+                            <textarea class="form-control" id="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100 py-2">Enviar Consulta</button>
+                    </form>
+                </div>
             </div>
 
         </div>
