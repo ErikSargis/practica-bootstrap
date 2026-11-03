@@ -66,20 +66,20 @@
                     <form>
                         <div class="mb-3">
                             <label for="nom" class="form-label fw-semibold">Nom i Cognoms</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom">
+                            <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom" required>
                         </div>
 
                         <!-- type="email" demana al navegador que comprovi el format del correu. -->
                         <div class="mb-3">
                             <label for="email" class="form-label fw-semibold">Correu Electrònic</label>
-                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com">
+                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
                         </div>
 
                         <!-- El menú desplegable permet triar una destinació. -->
                         <div class="mb-3">
                             <label for="destinacio" class="form-label fw-semibold">Destinació d'Interès</label>
-                            <select class="form-select" id="destinacio">
-                                <option selected>Tria una opció...</option>
+                            <select class="form-select" id="destinacio" required>
+                                <option value="" selected disabled>Tria una opció...</option>
                                 <option value="1">La Cascada d'Erevan</option>
                                 <option value="2">Temple de Garni</option>
                                 <option value="3">Monestir de Khor Virap</option>
@@ -91,7 +91,7 @@
                         <!-- Àrea de text per a consultes més llargues que una sola línia. -->
                         <div class="mb-3">
                             <label for="missatge" class="form-label fw-semibold">Missatge o Consulta</label>
-                            <textarea class="form-control" id="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..."></textarea>
+                            <textarea class="form-control" id="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..." required></textarea>
                         </div>
 
                         <!-- Sense un servidor configurat, el formulari no desa ni envia dades. -->
