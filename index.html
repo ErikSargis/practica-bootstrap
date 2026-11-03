@@ -58,7 +58,7 @@
             height: clamp(340px, 52vw, 600px);
             object-fit: contain;
             position: relative;
-            z-index: 1;3
+            z-index: 1;
         }
 
         .carousel-item {
@@ -365,19 +365,19 @@
             <div class="card border-0 shadow-sm p-4 p-md-5">
                 <h3 class="fw-bold text-primary mb-4">Planifica la teva visita</h3>
                 <!-- required activa la comprovació bàsica del navegador abans d'enviar. -->
-                <form>
+                <form onsubmit="cridaSubmit1(event)">
                     <div class="row g-3">
                         <div class="col-md-6">
                             <label for="nom" class="form-label fw-semibold">Nom i cognoms</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom" required>
+                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Escriu el teu nom" required>
                         </div>
                         <div class="col-md-6">
                             <label for="email" class="form-label fw-semibold">Correu electrònic</label>
-                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="nom@exemple.com" required>
                         </div>
                         <div class="col-md-6">
                             <label for="destinacio" class="form-label fw-semibold">Destinació d'interès</label>
-                            <select class="form-select" id="destinacio" required>
+                            <select class="form-select" id="destinacio" name="destinacio" required>
                                 <option value="" selected disabled>Tria una opció...</option>
                                 <option value="cascade">La Cascada d'Erevan</option>
                                 <option value="garni">Temple de Garni</option>
@@ -388,7 +388,7 @@
                         </div>
                         <div class="col-12">
                             <label for="missatge" class="form-label fw-semibold">Missatge o consulta</label>
-                            <textarea class="form-control" id="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..." required></textarea>
+                            <textarea class="form-control" id="missatge" name="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..." required></textarea>
                         </div>
                         <div class="col-12">
                             <button type="submit" class="btn btn-primary px-4 py-2">Enviar consulta</button>
@@ -407,6 +407,22 @@
         </div>
     </footer>
 
+    <script>
+        function cridaSubmit1(event) {
+            event.preventDefault();
+
+            var nom = document.getElementById("nom").value;
+            var email = document.getElementById("email").value;
+            var destinacio = document.getElementById("destinacio").value;
+            var missatge = document.getElementById("missatge").value;
+
+            console.log("Nom: " + nom);
+            console.log("Correu: " + email);
+            console.log("Destinacio: " + destinacio);
+            console.log("Missatge: " + missatge);
+            console.log("Hola " + nom);
+        }
+    </script>
     <!-- Bootstrap JavaScript: activa el carrusel i el menú desplegable del mòbil. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

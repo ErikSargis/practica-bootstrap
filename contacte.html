@@ -63,22 +63,22 @@
 
                     <!-- Cada label "for" apunta a l'id del seu camp.
                          Això associa el nom visible amb el camp corresponent. -->
-                    <form>
+                    <form onsubmit="cridaSubmit1(event)">
                         <div class="mb-3">
                             <label for="nom" class="form-label fw-semibold">Nom i Cognoms</label>
-                            <input type="text" class="form-control" id="nom" placeholder="Escriu el teu nom" required>
+                            <input type="text" class="form-control" id="nom" name="nom" placeholder="Escriu el teu nom" required>
                         </div>
 
                         <!-- type="email" demana al navegador que comprovi el format del correu. -->
                         <div class="mb-3">
                             <label for="email" class="form-label fw-semibold">Correu Electrònic</label>
-                            <input type="email" class="form-control" id="email" placeholder="nom@exemple.com" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="nom@exemple.com" required>
                         </div>
 
                         <!-- El menú desplegable permet triar una destinació. -->
                         <div class="mb-3">
                             <label for="destinacio" class="form-label fw-semibold">Destinació d'Interès</label>
-                            <select class="form-select" id="destinacio" required>
+                            <select class="form-select" id="destinacio" name="destinacio" required>
                                 <option value="" selected disabled>Tria una opció...</option>
                                 <option value="1">La Cascada d'Erevan</option>
                                 <option value="2">Temple de Garni</option>
@@ -91,10 +91,10 @@
                         <!-- Àrea de text per a consultes més llargues que una sola línia. -->
                         <div class="mb-3">
                             <label for="missatge" class="form-label fw-semibold">Missatge o Consulta</label>
-                            <textarea class="form-control" id="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..." required></textarea>
+                            <textarea class="form-control" id="missatge" name="missatge" rows="4" placeholder="Explica'ns els teus plans de viatge..." required></textarea>
                         </div>
 
-                        <!-- Sense un servidor configurat, el formulari no desa ni envia dades. -->
+                        <!-- Sense un servidor configurat, les dades només es mostren a la consola. -->
                         <button type="submit" class="btn btn-primary w-100 py-2">Enviar Consulta</button>
                     </form>
                 </div>
@@ -110,6 +110,22 @@
         </div>
     </footer>
 
+    <script>
+        function cridaSubmit1(event) {
+            event.preventDefault();
+
+            var nom = document.getElementById("nom").value;
+            var email = document.getElementById("email").value;
+            var destinacio = document.getElementById("destinacio").value;
+            var missatge = document.getElementById("missatge").value;
+
+            console.log("Nom: " + nom);
+            console.log("Correu: " + email);
+            console.log("Destinacio: " + destinacio);
+            console.log("Missatge: " + missatge);
+            console.log("Hola " + nom);
+        }
+    </script>
     <!-- Bootstrap JavaScript necessari per al menú desplegable en mòbil. -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
