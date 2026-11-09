@@ -12,13 +12,13 @@
     <!-- 1. Menú de navegació; "active" marca la pàgina actual. -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">Visit Armenia</a>
+            <a class="navbar-brand fw-bold" href="../index.html">Visit Armenia</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacio">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="menuNavegacio">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Inici</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Inici</a></li>
                     <li class="nav-item"><a class="nav-link" href="destinacions.html">Destinacions</a></li>
                     <li class="nav-item"><a class="nav-link active" href="contacte.html">Contacte</a></li>
                 </ul>
@@ -69,6 +69,11 @@
                             <input type="text" class="form-control" id="nom" name="nom" placeholder="Escriu el teu nom" required>
                         </div>
 
+                        <div class="mb-3">
+                            <label for="dataNaixement" class="form-label fw-semibold">Data de naixement</label>
+                            <input type="date" class="form-control" id="dataNaixement" name="dataNaixement" required>
+                        </div>
+
                         <!-- type="email" demana al navegador que comprovi el format del correu. -->
                         <div class="mb-3">
                             <label for="email" class="form-label fw-semibold">Correu Electrònic</label>
@@ -111,15 +116,35 @@
     </footer>
 
     <script>
+        var campDataNaixement = document.getElementById("dataNaixement");
+        var dataTallEdat = new Date();
+        dataTallEdat.setFullYear(dataTallEdat.getFullYear() - 18);
+
+        var dataMaxima = [
+            dataTallEdat.getFullYear(),
+            String(dataTallEdat.getMonth() + 1).padStart(2, "0"),
+            String(dataTallEdat.getDate()).padStart(2, "0")
+        ].join("-");
+        campDataNaixement.max = dataMaxima;
+        campDataNaixement.addEventListener("input", function () {
+            campDataNaixement.setCustomValidity(
+                campDataNaixement.value > dataMaxima
+                    ? "Has de ser major d'edat per enviar la consulta."
+                    : ""
+            );
+        });
+
         function cridaSubmit1(event) {
             event.preventDefault();
 
             var nom = document.getElementById("nom").value;
+            var dataNaixement = document.getElementById("dataNaixement").value;
             var email = document.getElementById("email").value;
             var destinacio = document.getElementById("destinacio").value;
             var missatge = document.getElementById("missatge").value;
 
             console.log("Nom: " + nom);
+            console.log("Data de naixement: " + dataNaixement);
             console.log("Correu: " + email);
             console.log("Destinacio: " + destinacio);
             console.log("Missatge: " + missatge);
