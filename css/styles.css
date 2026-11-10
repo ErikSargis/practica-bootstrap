@@ -1,0 +1,114 @@
+/* Colors propis del lloc: es reutilitzen amb var(--nom) a sota. */
+:root {
+    --armenia-navy: #17263f;
+    --armenia-orange: #f2a000;
+}
+
+/* Estils que Bootstrap no inclou i que personalitzen la identitat visual. */
+body {
+    color: var(--armenia-navy);
+}
+
+.navbar {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.navbar-brand {
+    color: var(--armenia-orange);
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
+}
+
+.navbar-brand:hover,
+.nav-link {
+    color: var(--armenia-navy);
+}
+
+.nav-link.active {
+    font-weight: 600;
+}
+
+.site-intro {
+    background: #fff;
+    color: var(--armenia-navy);
+}
+
+.site-intro h1,
+.text-primary {
+    color: var(--armenia-navy) !important;
+}
+
+.carousel {
+    border-radius: 1rem !important;
+}
+
+/* La foto sencera es manté visible. L'alçada s'adapta a la pantalla,
+   amb un mínim de 340 px i un màxim de 600 px. */
+.carousel-image {
+    width: 100%;
+    height: clamp(340px, 52vw, 600px);
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+}
+
+.carousel-item {
+    isolation: isolate;
+    position: relative;
+    background-color: #e9ecef;
+}
+
+/* Fons desenfocat de la mateixa diapositiva per omplir els laterals
+   quan la foto principal no té la mateixa proporció que el carrusel. */
+.carousel-item::before {
+    content: "";
+    position: absolute;
+    inset: -12px;
+    z-index: 0;
+    background: var(--slide-image) center / cover no-repeat;
+    filter: blur(14px) brightness(0.7);
+}
+
+.carousel-caption {
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2rem 1rem 1rem;
+    background: linear-gradient(transparent, rgba(23, 38, 63, 0.72)) !important;
+}
+
+/* Ajustos de llegibilitat del títol i la descripció sobre la foto. */
+.carousel-caption h5 {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.carousel-caption p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.55);
+}
+
+.card {
+    border-radius: 1rem;
+}
+
+/* Canviem els colors Bootstrap dels botons per la paleta del lloc. */
+.btn-primary {
+    --bs-btn-color: var(--armenia-navy);
+    --bs-btn-bg: var(--armenia-orange);
+    --bs-btn-border-color: var(--armenia-orange);
+    --bs-btn-hover-color: var(--armenia-navy);
+    --bs-btn-hover-bg: #dc9100;
+    --bs-btn-hover-border-color: #dc9100;
+    --bs-btn-active-bg: #dc9100;
+    --bs-btn-active-border-color: #dc9100;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--armenia-navy);
+    --bs-btn-border-color: var(--armenia-navy);
+    --bs-btn-hover-bg: var(--armenia-navy);
+    --bs-btn-hover-border-color: var(--armenia-navy);
+}
